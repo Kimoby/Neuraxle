@@ -1,7 +1,9 @@
 from py._path.local import LocalPath
+import pytest
 
 
-def test_auto_ml_loop_clean_kara(tmpdir: LocalPath):
+@pytest.mark.filterwarnings("default::UserWarning")
+def test_auto_ml_loop_clean_kata(tmpdir: LocalPath):
     from examples.auto_ml.plot_automl_loop_clean_kata import main
     main()
 

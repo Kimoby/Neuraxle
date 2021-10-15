@@ -120,6 +120,7 @@ class TestServiceAssertion:
         shutil.rmtree(self.tmpdir, ignore_errors=True)
         shutil.rmtree(self.tmpdir+"_hp", ignore_errors=True)
 
+    @pytest.mark.filterwarnings("default::UserWarning")
     def test_step_with_context_saver(self, tmpdir):
         self._setup(tmpdir)
         context = ExecutionContext(root=self.tmpdir)
